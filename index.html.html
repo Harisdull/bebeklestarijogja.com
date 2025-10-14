@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebek Lestari Jogja - Telur Bebek Organik Kaya Omega 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8BC34A;
+            --primary-dark: #689F38;
+            --secondary: #FFC107;
+            --light: #F9F9F9;
+            --dark: #333;
+            --gray: #777;
+            --light-gray: #f5f5f5;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Logo Bebek Lestari.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Products Section */
+        .products {
+            background-color: var(--light-gray);
+        }
+
+        .product-categories {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .category-btn {
+            background-color: white;
+            border: 2px solid var(--primary);
+            color: var(--primary-dark);
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .category-btn.active, .category-btn:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .product-price span {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-decoration: line-through;
+            margin-left: 5px;
+        }
+
+        /* Testimonials */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: """;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .testimonial-text {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-gray);
+        }
+
+        .contact-content {
+            display: flex;
+            gap: 40px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+            
+            .about-image, .contact-info, .contact-form {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .product-categories {
+                flex-wrap: wrap;
+            }
+        }
+        /* === STYLE UNTUK TABEL INTERAKTIF === */
+
+.intro-text {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.comparison-section {
+    margin: 40px 0;
+}
+
+.interactive-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary-dark);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.control-btn.active, .control-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.comparison-table th {
+    background-color: var(--primary);
+    color: white;
+    padding: 18px 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.comparison-table td {
+    padding: 16px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.comparison-table tr:hover {
+    background-color: rgba(139, 195, 74, 0.05);
+    transition: var(--transition);
+}
+
+.nutrient-name {
+    text-align: left !important;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.highlight {
+    background-color: rgba(255, 193, 7, 0.15) !important;
+    position: relative;
+}
+
+.highlight::after {
+    content: "✓ Terbaik";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: var(--secondary);
+    color: var(--dark);
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.value-high {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 1.05rem;
+}
+
+.percentage-diff {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.stats-bar {
+    display: flex;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.stats-bar-organic {
+    background: var(--primary);
+    height: 100%;
+}
+
+.stats-bar-regular {
+    background: #ddd;
+    height: 100%;
+}
+
+.nutrition-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.fact-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.fact-card:hover {
+    transform: translateY(-5px);
+}
+
+.fact-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(139, 195, 74, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+}
+
+.fact-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .comparison-table th, 
+    .comparison-table td {
+        padding: 12px 8px;
+        font-size: 0.9rem;
+    }
+    
+    .interactive-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .control-btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+    
+    .nutrition-facts {
+        grid-template-columns: 1fr;
+    }
+}
+/* ======= STYLE SECTION BERITA ======= */
+.news {
+    background-color: var(--light-gray);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* ======= CARD STYLE ======= */
+.news-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.news-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-title-link {
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: var(--transition);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.news-title-link:hover {
+    color: var(--primary);
+}
+
+.news-excerpt {
+    color: var(--gray);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.news-date {
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.news-read-more {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.news-read-more:hover {
+    color: var(--primary-dark);
+    transform: translateX(3px);
+}
+
+/* ======= MINIMAL STYLE ======= */
+.news-item-minimal {
+    background: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--primary);
+}
+
+.news-badge {
+    background: var(--secondary);
+    color: var(--dark);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.news-minimal-link {
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: var(--transition);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.news-minimal-link:hover {
+    color: var(--primary);
+}
+
+.news-minimal-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.news-minimal-read {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.news-minimal-read:hover {
+    color: var(--primary-dark);
+}
+
+/* ======= LIST STYLE ======= */
+.news-list {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.news-list-header {
+    background: var(--primary);
+    color: white;
+    padding: 20px;
+}
+
+.news-list-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.news-list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list-item {
+    border-bottom: 1px solid #eee;
+}
+
+.news-list-item:last-child {
+    border-bottom: none;
+}
+
+.news-list-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--dark);
+    transition: var(--transition);
+}
+
+.news-list-link:hover {
+    background: rgba(139, 195, 74, 0.05);
+}
+
+.news-list-title {
+    font-weight: 500;
+    flex: 1;
+}
+
+.news-list-date {
+    color: var(--gray);
+    font-size: 0.8rem;
+    margin-left: 15px;
+}
+
+.news-list-link:hover .news-list-title {
+    color: var(--primary);
+}
+
+/* ======= CTA BUTTON ======= */
+.news-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .news-content {
+        padding: 20px;
+    }
+    
+    .news-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .news-minimal-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .news-list-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .news-list-date {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-image {
+        height: 160px;
+    }
+    
+    .news-title-link {
+        font-size: 1.1rem;
+    }
+    
+    .news-minimal-link {
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<script>
+    // Filter interaktif untuk tabel
+    document.querySelectorAll('.control-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            // Hapus kelas active dari semua tombol
+            document.querySelectorAll('.control-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Tambahkan kelas active ke tombol yang diklik
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            const rows = document.querySelectorAll('.nutrient-row');
+            
+            rows.forEach(row => {
+                if (filter === 'all') {
+                    row.style.display = '';
+                } else if (filter === 'significant') {
+                    if (row.getAttribute('data-category').includes('significant')) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                } else if (filter === 'omega') {
+                    if (row.getAttribute('data-category').includes('omega')) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+    
+    // Animasi saat halaman dimuat
+    document.addEventListener('DOMContentLoaded', function() {
+        const rows = document.querySelectorAll('.nutrient-row');
+        rows.forEach((row, index) => {
+            row.style.opacity = '0';
+            row.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                row.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                row.style.opacity = '1';
+                row.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    });
+</script>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-egg"></i>
+                    <span class="logo-text">Bebek Lestari Jogja</span>
+                </div>
+                <div class="nav-links">
+    <a href="#home">Beranda</a>
+    <a href="#about">Tentang</a>
+    <a href="#products">Produk</a>
+    <a href="#manfaat">Manfaat</a>
+    <a href="#testimonials">Testimoni</a>
+    <a href="#contact">Kontak</a>
+</div>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Telur Bebek Organik Kaya Omega 3</h1>
+            <p>Kualitas premium dari peternakan bebek organik dengan pakan alami untuk kesehatan keluarga Anda</p>
+            <a href="#products" class="btn">Lihat Produk</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mengapa Memilih Telur Kami?</h2>
+                <p>Kami menghadirkan telur bebek organik berkualitas tinggi dengan proses alami dan perhatian penuh terhadap kesejahteraan hewan</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Kualitas Premium dengan Perlakuan Alami</h3>
+                    <p>Bebek Lestari Jogja berkomitmen untuk menghasilkan telur bebek organik berkualitas tinggi dengan sistem peternakan yang ramah lingkungan dan berkelanjutan.</p>
+                    <p>Bebek-bebek kami diberi pakan organik khusus yang kaya nutrisi, tanpa bahan kimia tambahan, antibiotik, atau hormon pertumbuhan. Hal ini menghasilkan telur dengan kandungan Omega 3 yang lebih tinggi, kuning telur yang lebih pekat, dan rasa yang lebih gurih.</p>
+                    <p>Dengan mengonsumsi telur bebek organik kami, Anda tidak hanya mendapatkan nutrisi terbaik untuk keluarga, tetapi juga turut mendukung praktik peternakan yang berkelanjutan dan ramah lingkungan.</p>
+                    <a href="#contact" class="btn">Hubungi Kami</a>
+                </div>
+                <div class="about-image">
+                    <img src="gambar/foto telur di tangan.jpg" alt="Telur Bebek Organik">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Benefits Section -->
+    <section class="section benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>Manfaat Kesehatan</h2>
+                <p>Telur bebek organik kami memberikan berbagai manfaat kesehatan yang luar biasa bagi tubuh Anda</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Kesehatan Otak</h3>
+                    <p>Omega-3 dalam telur bebek organik membantu meningkatkan fungsi kognitif, memori, dan perkembangan otak, terutama pada anak-anak.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Kesehatan Jantung</h3>
+                    <p>Kandungan Omega-3 membantu menurunkan trigliserida, mengurangi risiko penyakit jantung, dan menjaga tekanan darah normal.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Kesehatan Mata</h3>
+                    <p>Asam lemak Omega-3 dan antioksidan dalam telur bebek organik membantu menjaga kesehatan retina dan mencegah degenerasi makula.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Perkembangan Janin</h3>
+                    <p>Omega-3 sangat penting untuk perkembangan otak dan mata janin selama kehamilan, serta membantu mencegah kelahiran prematur.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Sistem Imun</h3>
+                    <p>Kandungan vitamin dan mineral yang tinggi dalam telur bebek organik membantu memperkuat sistem kekebalan tubuh.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Bebas Kimia</h3>
+                    <p>Diproduksi secara organik tanpa antibiotik, hormon, atau bahan kimia berbahaya, menjadikannya pilihan sehat untuk keluarga.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Perbandingan Nutrisi</h2>
+            <p>Telur Bebek Organik vs Telur Ayam Biasa</p>
+        </div>
+        
+        <div class="intro-text">
+            <p>Dengan mengonsumsi telur bebek organik secara rutin, Anda memberikan asupan nutrisi terbaik untuk keluarga.</p>
+        </div>
+        
+        <div class="comparison-section">
+            <div class="interactive-controls">
+                <button class="control-btn active" data-filter="all">
+                    <i class="fas fa-list"></i> Semua Nutrisi
+                               
+            </div>
+            
+            <div class="table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Nutrisi</th>
+                            <th>Telur Bebek Organik</th>
+                            <th>Telur Ayam Biasa</th>
+                            <th>Perbandingan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="nutrient-row" data-category="significant">
+                            <td class="nutrient-name">
+                                <i class="fas fa-water" style="color: #2196F3; margin-right: 8px;"></i>
+                                Omega-3 (per 100g)
+                            </td>
+                            <td class="highlight">
+                                <span class="value-high">450 mg</span>
+                            </td>
+                            <td>150 mg</td>
+                            <td>
+                                <div class="stats-bar">
+                                    <div class="stats-bar-organic" style="width: 75%"></div>
+                                    <div class="stats-bar-regular" style="width: 25%"></div>
+                                </div>
+                                <span class="percentage-diff">+200%</span>
+                            </td>
+                        </tr>
+                        <tr class="nutrient-row" data-category="">
+                            <td class="nutrient-name">
+                                <i class="fas fa-dumbbell" style="color: #FF9800; margin-right: 8px;"></i>
+                                Protein (per 100g)
+                            </td>
+                            <td class="highlight">
+                                <span class="value-high">13 g</span>
+                            </td>
+                            <td>12 g</td>
+                            <td>
+                                <div class="stats-bar">
+                                    <div class="stats-bar-organic" style="width: 52%"></div>
+                                    <div class="stats-bar-regular" style="width: 48%"></div>
+                                </div>
+                                <span class="percentage-diff">+8%</span>
+                            </td>
+                        </tr>
+                        <tr class="nutrient-row" data-category="significant">
+                            <td class="nutrient-name">
+                                <i class="fas fa-brain" style="color: #9C27B0; margin-right: 8px;"></i>
+                                Vitamin B12
+                            </td>
+                            <td class="highlight">
+                                <span class="value-high">7.5 mcg</span>
+                            </td>
+                            <td>3.5 mcg</td>
+                            <td>
+                                <div class="stats-bar">
+                                    <div class="stats-bar-organic" style="width: 68%"></div>
+                                    <div class="stats-bar-regular" style="width: 32%"></div>
+                                </div>
+                                <span class="percentage-diff">+114%</span>
+                            </td>
+                        </tr>
+                        <tr class="nutrient-row" data-category="significant">
+                            <td class="nutrient-name">
+                                <i class="fas fa-eye" style="color: #E91E63; margin-right: 8px;"></i>
+                                Vitamin A
+                            </td>
+                            <td class="highlight">
+                                <span class="value-high">1500 IU</span>
+                            </td>
+                            <td>1000 IU</td>
+                            <td>
+                                <div class="stats-bar">
+                                    <div class="stats-bar-organic" style="width: 60%"></div>
+                                    <div class="stats-bar-regular" style="width: 40%"></div>
+                                </div>
+                                <span class="percentage-diff">+50%</span>
+                            </td>
+                        </tr>
+                        <tr class="nutrient-row" data-category="significant">
+                            <td class="nutrient-name">
+                                <i class="fas fa-tint" style="color: #F44336; margin-right: 8px;"></i>
+                                Zat Besi
+                            </td>
+                            <td class="highlight">
+                                <span class="value-high">3.8 mg</span>
+                            </td>
+                            <td>2.1 mg</td>
+                            <td>
+                                <div class="stats-bar">
+                                    <div class="stats-bar-organic" style="width: 64%"></div>
+                                    <div class="stats-bar-regular" style="width: 36%"></div>
+                                </div>
+                                <span class="percentage-diff">+81%</span>
+                            </td>
+                        </tr>
+                        <tr class="nutrient-row" data-category="">
+                            <td class="nutrient-name">
+                                <i class="fas fa-shield-alt" style="color: #4CAF50; margin-right: 8px;"></i>
+                                Selenium
+                            </td>
+                            <td class="highlight">
+                                <span class="value-high">36 mcg</span>
+                            </td>
+                            <td>31 mcg</td>
+                            <td>
+                                <div class="stats-bar">
+                                    <div class="stats-bar-organic" style="width: 54%"></div>
+                                    <div class="stats-bar-regular" style="width: 46%"></div>
+                                </div>
+                                <span class="percentage-diff">+16%</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="nutrition-facts">
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Omega-3 3x Lebih Tinggi</h3>
+                    <p>Mendukung kesehatan otak, jantung, dan mengurangi peradangan</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Vitamin B12 2x Lebih Tinggi</h3>
+                    <p>Penting untuk sistem saraf dan produksi sel darah merah</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Zat Besi 80% Lebih Tinggi</h3>
+                    <p>Mencegah anemia dan meningkatkan energi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Nutrition Section -->
+    <section class="section" style="background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kandungan Gizi Detail</h2>
+                <p>Komposisi nutrisi lengkap dalam setiap butir telur bebek organik kami</p>
+            </div>
+            <div class="nutrition-content">
+                <div class="nutrition-chart">
+                    <h3 style="text-align: center; margin-bottom: 30px;">Kandungan per 100g</h3>
+                    <div class="nutrition-item">
+                        <div class="nutrition-label">
+                            <span>Protein</span>
+                            <span>13g</span>
+                        </div>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-label">
+                            <span>Lemak Total</span>
+                            <span>14g</span>
+                        </div>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-label">
+                            <span>Omega-3</span>
+                            <span>450mg</span>
+                        </div>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-fill" style="width: 90%; background-color: #4CAF50;"></div>
+                        </div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-label">
+                            <span>Kolesterol</span>
+                            <span>620mg</span>
+                        </div>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-label">
+                            <span>Vitamin A</span>
+                            <span>1500 IU</span>
+                        </div>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-label">
+                            <span>Vitamin B12</span>
+                            <span>7.5mcg</span>
+                        </div>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nutrition-text">
+                    <h3>Kelebihan Gizi Telur Bebek Organik</h3>
+                    <p>Telur bebek organik kami tidak hanya kaya akan Omega-3, tetapi juga mengandung berbagai vitamin dan mineral essensial yang penting untuk kesehatan optimal:</p>
+                    
+                    <h4 style="margin-top: 20px; color: var(--primary-dark);">Vitamin:</h4>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li><strong>Vitamin A</strong> - Untuk kesehatan mata dan kulit</li>
+                        <li><strong>Vitamin B12</strong> - Untuk sistem saraf dan produksi sel darah merah</li>
+                        <li><strong>Vitamin D</strong> - Untuk kesehatan tulang dan penyerapan kalsium</li>
+                        <li><strong>Vitamin E</strong> - Antioksidan kuat untuk melawan radikal bebas</li>
+                    </ul>
+                    
+                    <h4 style="color: var(--primary-dark);">Mineral:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Zat Besi</strong> - Mencegah anemia dan meningkatkan energi</li>
+                        <li><strong>Selenium</strong> - Mendukung fungsi tiroid dan sistem imun</li>
+                        <li><strong>Fosfor</strong> - Untuk kesehatan tulang dan gigi</li>
+                        <li><strong>Zinc</strong> - Untuk penyembuhan luka dan fungsi imun</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Produk Kami</h2>
+                <p>Pilih varian telur bebek organik sesuai kebutuhan Anda</p>
+            </div>
+            <div class="product-categories">
+                <button class="category-btn active" data-category="premium">Premium</button>
+                <button class="category-btn" data-category="spesial">Spesial</button>
+                <button class="category-btn" data-category="standar">Standar</button>
+            </div>
+            <div class="product-grid">
+                <!-- Premium Products -->
+                <div class="product-card" data-category="premium">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Premium">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Premium</span>
+                        <h3 class="product-title">Telur Bebek Premium (Diatas 70gr)</h3>
+                        <p class="product-price">Rp 3.800/butir</p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Telur%20Bebek%20Premium%20per%20butir" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="premium">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Premium Paket 4">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Premium</span>
+                        <h3 class="product-title">Paket 4 Butir</h3>
+                        <p class="product-price">Rp 15.500 <span>Rp 15.200</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%204%20Butir%20Telur%20Bebek%20Premium" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="premium">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Premium Paket 10">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Premium</span>
+                        <h3 class="product-title">Paket 6 Butir</h3>
+                        <p class="product-price">Rp 22.500 <span>Rp 22.800</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%2010%20Butir%20Telur%20Bebek%20Premium" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="premium">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Premium Paket 10">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Premium</span>
+                        <h3 class="product-title">Paket 10 Butir</h3>
+                        <p class="product-price">Rp 36.000 <span>Rp 38.000</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%2010%20Butir%20Telur%20Bebek%20Premium" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="premium">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Premium Paket 15">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Premium</span>
+                        <h3 class="product-title">Paket 15 Butir</h3>
+                        <p class="product-price">Rp 51.000 <span>Rp 57.000</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%2015%20Butir%20Telur%20Bebek%20Premium" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                
+                <!-- Spesial Products -->
+                <div class="product-card" data-category="spesial" style="display: none;">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Spesial">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Spesial</span>
+                        <h3 class="product-title">Telur Bebek Spesial (60-69gr)</h3>
+                        <p class="product-price">Rp 3.300/butir</p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Telur%20Bebek%20Spesial%20per%20butir" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="spesial" style="display: none;">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Spesial Paket 4">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Spesial</span>
+                        <h3 class="product-title">Paket 4 Butir</h3>
+                        <p class="product-price">Rp 13.500 <span>Rp 13.200</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%204%20Butir%20Telur%20Bebek%20Spesial" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="spesial" style="display: none;">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Spesial Paket 10">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Spesial</span>
+                        <h3 class="product-title">Paket 6 Butir</h3>
+                        <p class="product-price">Rp 20.000 <span>Rp 19.800</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%2010%20Butir%20Telur%20Bebek%20Spesial" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="spesial" style="display: none;">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Spesial Paket 10">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Spesial</span>
+                        <h3 class="product-title">Paket 10 Butir</h3>
+                        <p class="product-price">Rp 32.000 <span>Rp 33.000</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%2010%20Butir%20Telur%20Bebek%20Spesial" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="spesial" style="display: none;">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Spesial Paket 15">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Spesial</span>
+                        <h3 class="product-title">Paket 15 Butir</h3>
+                        <p class="product-price">Rp 45.000 <span>Rp 49.500</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%2015%20Butir%20Telur%20Bebek%20Spesial" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                
+                <!-- Standar Products -->
+                <div class="product-card" data-category="standar" style="display: none;">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Standar">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Standar</span>
+                        <h3 class="product-title">Telur Bebek Standar (50-59gr)</h3>
+                        <p class="product-price">Rp 3.000/butir</p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Telur%20Bebek%20Standar%20per%20butir" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="standar" style="display: none;">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Standar Paket 4">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Standar</span>
+                        <h3 class="product-title">Paket 4 Butir</h3>
+                        <p class="product-price">Rp 12.500 <span>Rp 12.000</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%204%20Butir%20Telur%20Bebek%20Standar" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="standar" style="display: none;">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Standar Paket 10">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Standar</span>
+                        <h3 class="product-title">Paket 6 Butir</h3>
+                        <p class="product-price">Rp 17.500 <span>Rp 18.000</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%2010%20Butir%20Telur%20Bebek%20Standar" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="standar" style="display: none;">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Standar Paket 10">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Standar</span>
+                        <h3 class="product-title">Paket 10 Butir</h3>
+                        <p class="product-price">Rp 27.500 <span>Rp 30.000</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%2010%20Butir%20Telur%20Bebek%20Standar" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="standar" style="display: none;">
+                    <div class="product-image">
+                        <img src="IMG_8234.JPG" alt="Telur Bebek Standar Paket 15">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Standar</span>
+                        <h3 class="product-title">Paket 15 Butir</h3>
+                        <p class="product-price">Rp 39.000 <span>Rp 45.000</span></p>
+                        <a href="https://wa.me/6285293363406?text=Saya%20ingin%20memesan%20Paket%2015%20Butir%20Telur%20Bebek%20Standar" class="btn" target="_blank">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Apa Kata Pelanggan Kami</h2>
+                <p>Testimoni dari pelanggan yang telah merasakan kualitas telur bebek organik kami</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Saya sudah beberapa kali beli telur bebek organik ini untuk keluarga. Rasanya lebih gurih dan tidak amis seperti telur bebek biasa. Anak-anak juga suka, apalagi kalau dibuat telur asin. Senang rasanya bisa dapat produk sehat dan alami!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">W</div>
+                        <div class="author-info">
+                            <h4>Winanda</h4>
+                            <p>Guru SD, Sleman</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Telur bebek organik ini kualitasnya bagus sekali untuk bahan kue. Kuning telurnya lebih pekat dan adonan jadi lebih lembut. Hasil jualan jadi naik karena pelanggan bilang rasa kuenya lebih enak dari biasanya."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Salma</h4>
+                            <p>Pembuat Kue, Yogyakarta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Saya pilih telur bebek organik karena bebas bahan kimia dan pakan alami. Setelah rutin konsumsi, badan terasa lebih fit dan kolesterol terjaga. Sangat direkomendasikan untuk yang peduli kesehatan."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Arum</h4>
+                            <p>Pegiat Hidup Sehat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Sudah langganan hampir 6 bulan beli lewat online. Telurnya selalu segar, pengemasan rapi, dan pengiriman cepat. Terima kasih sudah jaga kualitas dan kepercayaan pelanggan."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">H</div>
+                        <div class="author-info">
+                            <h4>Hestia</h4>
+                            <p>Ibu Rumah Tangga, Sleman</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hubungi Kami</h2>
+                <p>Pesan sekarang atau tanyakan informasi lebih lanjut tentang produk kami</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <p>Kami siap melayani pesanan dan pertanyaan Anda. Jangan ragu untuk menghubungi kami melalui berbagai saluran berikut:</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Alamat</h4>
+                                <p>Babadan, Sitimulyo, Piyungan, Bantul</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/6285293363406" style="color: var(--dark); text-decoration: none;">085293363406</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4>Instagram</h4>
+                                <p><a href="https://www.instagram.com/bebek.lestari" style="color: var(--dark); text-decoration: none;">@bebek.lestari</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </div>
+                            <div>
+                                <h4>TikTok</h4>
+                                <p><a href="https://www.tiktok.com/@bebek.lestari.jogja" style="color: var(--dark); text-decoration: none;">@bebek.lestari.jogja</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Kirim Pesan</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Bebek Lestari Jogja</h3>
+                    <p>Produsen telur bebek organik kaya omega 3 dengan kualitas premium dan perlakuan alami untuk kesehatan keluarga Indonesia.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/bebek.lestari" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@bebek.lestari.jogja" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/6285293363406" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Produk</h3>
+                    <ul class="footer-links">
+                        <li><a href="#products">Telur Premium</a></li>
+                        <li><a href="#products">Telur Spesial</a></li>
+                        <li><a href="#products">Telur Standar</a></li>
+                        <li><a href="#products">Paket Hemat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#products">Produk</a></li>
+                        <li><a href="#testimonials">Testimoni</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Babadan, Sitimulyo, Piyungan, Bantul</li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6285293363406">085293363406</a></li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/bebek.lestari">@bebek.lestari</a></li>
+                        <li><i class="fab fa-tiktok"></i> <a href="https://www.tiktok.com/@bebek.lestari.jogja">@bebek.lestari.jogja</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bebek Lestari Jogja. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</section>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Product Category Filter
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const category = button.getAttribute('data-category');
+                
+                // Show/hide products based on category
+                productCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Halo Bebek Lestari Jogja, saya ${name}. ${message}. Email: ${email}, Telepon: ${phone}`;
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/6285293363406?text=${encodedMessage}`, '_blank');
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message (you can replace this with a more sophisticated notification)
+            alert('Pesan berhasil dikirim! Anda akan diarahkan ke WhatsApp.');
+        });
+    </script>
+</body>
+</html>
